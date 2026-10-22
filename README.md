@@ -5,7 +5,9 @@ planar hexagonal lattice. Term *a(n)* is the number of lattice points at squared
 *n* from the center. The video moves outward one shell per note and lights up the points
 on each shell as its note plays.
 
-![Shell 637: 36 points light up on the wavefront](docs/shell-637.png)
+[![The first shells lighting up in time with the notes](docs/preview.gif)](https://github.com/kp-automata/sound-of-the-hexagonal-lattice/releases/download/v1.0/preview-shells-0-200.mp4)
+
+*The first 25 seconds, with sound: [preview-shells-0-200.mp4](https://github.com/kp-automata/sound-of-the-hexagonal-lattice/releases/download/v1.0/preview-shells-0-200.mp4)*
 
 > Most integer sequences out in the wild sound very bad. They typically are increasing, so
 > it's just a melody with higher and higher notes. When I was exploring sequences this one
@@ -53,6 +55,8 @@ steady climb. The first 4096 terms cover 14,839 points spread over 1,003 non-emp
 4. **Video.** Raw frames go straight into GStreamer (x264 + AAC), with no PNG sequence on
    disk. [`verify.py`](verify.py) decodes the finished mp4 and confirms the audio
    lag is constant from start to end.
+
+![Shell 637: 36 points light up on the wavefront](docs/shell-637.png)
 
 As the passed shells pile up, the disk fills in with the pattern below:
 

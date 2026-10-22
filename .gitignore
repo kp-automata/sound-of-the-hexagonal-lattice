@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+
+# generated renders, stills and caches
+out/
+
+# the rendered audio is 130 MB, over GitHub's file limit
+output/*.wav

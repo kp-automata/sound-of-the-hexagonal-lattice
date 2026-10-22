@@ -1,0 +1,13 @@
+[project]
+name = "sound-of-the-hexagonal-lattice"
+version = "0.1.0"
+description = "Audiovisual rendering of OEIS A004016, the theta series of the hexagonal lattice"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pycairo>=1.20",
+]
+
+[tool.uv]
+package = false

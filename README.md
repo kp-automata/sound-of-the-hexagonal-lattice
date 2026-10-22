@@ -9,13 +9,6 @@ on each shell as its note plays.
 
 *The first 25 seconds, with sound: [preview-shells-0-200.mp4](https://github.com/kp-automata/sound-of-the-hexagonal-lattice/releases/download/v1.0/preview-shells-0-200.mp4)*
 
-> Most integer sequences out in the wild sound very bad. They typically are increasing, so
-> it's just a melody with higher and higher notes. When I was exploring sequences this one
-> was an outlier aesthetically.
->
-> I was also not expecting the beautiful tapestry-like pattern to emerge, so that was a
-> pleasant surprise. :)
-
 ## The math
 
 $$a(n) = \left|\lbrace (x, y) \in \mathbb{Z}^2 : x^2 + xy + y^2 = n \rbrace\right|$$

@@ -2,12 +2,15 @@
 
 An audiovisual take on [OEIS A004016](https://oeis.org/A004016), the theta series of the
 planar hexagonal lattice. Term *a(n)* is the number of lattice points at squared distance
-*n* from the center. The video moves outward one shell per note and lights up the points
-on each shell as its note plays.
+*n* from the center. The video moves outward with one shell per note and lights up the points
+on each shell as its corresponding note plays.
 
 [![The first shells lighting up in time with the notes](docs/preview.gif)](https://github.com/kp-automata/sound-of-the-hexagonal-lattice/releases/download/v1.0/preview-shells-0-200.mp4)
 
 *The first 25 seconds, with sound: [preview-shells-0-200.mp4](https://github.com/kp-automata/sound-of-the-hexagonal-lattice/releases/download/v1.0/preview-shells-0-200.mp4)*
+
+## Disclaimer 
+This is just a fun personal project that I wanted a referable record of. It is not representative of what I would produce professionally. 
 
 ## The math
 
@@ -27,16 +30,16 @@ a(n) :  0  0  6 12  0  0  6  0  0 12
 
 ![Shell 7: a(7) = 12 points on the circle of radius √7](docs/shell-7.png)
 
-Every nonzero term after a(0) is a multiple of 6, because the lattice is unchanged by a
-60° rotation. Most shells are empty, and the nonzero values come from a small set
-(6, 12, 18, 24, 30, 36, 48). That's why the sequence sounds like a melody instead of a
-steady climb. The first 4096 terms cover 14,839 points spread over 1,003 non-empty shells.
+Every nonzero term after a(0) is a multiple of 6. This is because the lattice is unchanged by a
+60° rotation. Most shells are empty and the nonzero values come from a small set
+(6, 12, 18, 24, 30, 36, 48). That's why the sequence sounds more like a melody instead of the typical
+constant climb you would find for most sequences in OEIS. The first 4096 terms cover 14,839 points spread over 1,003 non-empty shells.
 
 ## How it was made
 
-1. **Sound.** OEIS will turn any sequence into a MIDI file (the "listen" link). Here every
-   term is one note with pitch `a(n) + 20`, so an empty shell plays the lowest note. The
-   MIDI ([`output/A004016.mid`](output/A004016.mid)) went into a DAW with a synth bass
+1. **Sound.** OEIS allows you to turn any logged sequence into a MIDI file (the "listen" link). Here every
+   term is one note with pitch `a(n) + 20`, so an empty shell plays the lowest note. I put the
+   MIDI ([`output/A004016.mid`](output/A004016.mid)) into a DAW with a synth bass
    at 8 notes/s, giving a 512 s render.
 2. **Sync.** The rendered wav is the source of truth for timing. [`audio.py`](audio.py)
    finds note onsets using spectral flux and checks that they sit on a uniform 0.125 s grid
